@@ -1,0 +1,15 @@
+<h1>
+    {{titre}}
+</h1>
+<form class="col-lg-6" name="frmLog" (ngSubmit)="valider()">
+  <div class="form-group">
+      <label for="login">Login</label>
+      <input type="text" name="lg" class="form-control" [(ngModel)]="login"/>
+  </div>
+  <div class="form-group">
+      <label for="mdp">Mot de passe</label>
+      <input type="password" name="motdepasse" class="form-control" [(ngModel)]="mdp"/>
+  </div>
+  <button type="submit">Valider</button>
+</form>
+<div class="alert alert-danger" [hidden]="estCache">{{lblMessage}} </div>
